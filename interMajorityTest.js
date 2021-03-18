@@ -1,0 +1,19 @@
+const readlineSync = require('readline-sync')
+
+
+const majority = (firstName, LastName, age) => {
+  MajAge = Number(process.argv[2])
+  if(age < MajAge){
+    console.log(`Désolé, ${firstName} ${LastName}, vous êtes mineur, nous ne pouvez pas voter`)
+  } else if ( age >= MajAge) {
+    console.log(`Merci, ${firstName} ${LastName}, vous êtes majeur, vous pouvez voter`)
+  } else {
+    console.log('erreur, veuillez entrer un nombre')
+  }
+}
+
+let firstName = readlineSync.question("Bonjour, Votre prénom s'il vou plait: ")
+let LastName = readlineSync.question('Votre nom également:')
+let age = readlineSync.question('votre age:')
+
+majority(firstName, LastName, age)
