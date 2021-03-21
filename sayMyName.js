@@ -1,3 +1,5 @@
+// check Command line
+
 // condition 1
 if(process.argv.length !== 3){
   console.log('usage: node sayMyName.js string')
@@ -10,5 +12,6 @@ if(!isNaN(process.argv[2])){
   process.exit(1)
 }
 
+// main
 let str = process.argv[2]
 console.log(`My name is ${str}.`)
